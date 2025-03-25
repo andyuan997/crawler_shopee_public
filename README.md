@@ -15,8 +15,7 @@ user_list = [
             "fulinxuan",
             "pat6116xx",
             "join800127",
-            "jouhsuansu",
-            "...."
+            "jouhsuansu"
         ],
     }
 ]

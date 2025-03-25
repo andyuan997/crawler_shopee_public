@@ -131,7 +131,7 @@ class ProductDetailCrawler:
                 await asyncio.gather(*tasks)
 
         df_header = pd.DataFrame(
-            columns=[field.name for field in ItemParams.__fields__.values()]
+            columns=list(ItemParams.model_fields.keys())
         )
         df_header.to_csv(self.basepath + "/csv/pdp_detail.csv", index=False)
 

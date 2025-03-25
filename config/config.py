@@ -2,14 +2,17 @@ import os
 import logging
 from logging.handlers import RotatingFileHandler
 from datetime import datetime
+from typing import Optional
 
-from pydantic import BaseSettings
+
+from pydantic_settings import BaseSettings
+
 
 basedir = os.path.abspath(os.path.dirname(__file__))
 
 
 class BaseConfig(BaseSettings):
-    PROXY_URL: str = None
+    PROXY_URL: Optional[str] = None
     ENV: str = "default"
 
     class Config:
